@@ -23,16 +23,25 @@ You're done!
 ## Machine data
 
 OS: Ubuntu/Xenial 64
-IP: 192.168.56.211
+
 Apache ServerName: sandbox.dev
 
+PHP Version 7.1 (fpm)
+
+MailHog - current (http://sandbox.dev:8025)
 
 ## SSH user
 
 Username: sandbox
+
 Password: start100
 
 ## MySQL user
 
 Username: root
+
 Password: start100
+
+## TODO
+
+Some more configuration to get more project with one box in touch.

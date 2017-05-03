@@ -1,20 +1,17 @@
-nodes = [
-  {
-   :hostname => 'sandbox',
-   :ip => '192.168.56.211',
-   :box => 'ubuntu/xenial64',
-   :ram => 1024
-  }
-]
+require 'yaml'
+
+current_dir    = File.dirname(File.expand_path(__FILE__))
+config         = YAML.load_file("#{current_dir}/config.yml")
+nodes = config['config']['nodes']
 
 Vagrant.configure("2") do |config|
   nodes.each do |node|
-    config.vm.define node[:hostname] do |nodeconfig|
-      nodeconfig.vm.box = node[:box]
-      nodeconfig.vm.hostname = node[:hostname] + ".box"
-      nodeconfig.vm.network :private_network, ip: node[:ip]
+    config.vm.define node['hostname'] do |nodeconfig|
+      nodeconfig.vm.box = node['box']
+      nodeconfig.vm.hostname = node['hostname'] + ".box"
+      nodeconfig.vm.network :private_network, ip: node['ip']
 
-      memory = node[:ram] ? node[:ram] : 256;
+      memory = node['ram'] ? node['ram'] : 256;
       nodeconfig.vm.provider :virtualbox do |vb|
         vb.customize [
           "modifyvm", :id,

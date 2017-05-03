@@ -17,3 +17,10 @@ accounts::user { 'sandbox':
 	],
 	password => '$6$FsvJM0mx$MkRjvOTE/Sxyv7PeXFU5WGUQ2GgyiYTNpjdbB3wdOgiuTeWTUR.MRXyprrW585XIE/Njt/MjseSJNnHm82uDO0',
 }
+
+file { '/var/www/sandbox':
+	ensure => 'directory',
+	owner  => 'sandbox',
+	group  => 'sandbox',
+	mode   => '0755',
+}
