@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 				"--cpuexecutioncap", "50",
 				"--memory", "1024",
 			]
-		  end
+		end
 
 		nodeconfig.vm.provider :virtualbox do |vb|
 			vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
