@@ -13,7 +13,7 @@ apache::mod {
 # add vhost to apache
 ###########################
 apache::vhost { 'sandbox.dev - non-ssl':
-	servername      => 'typo3base.dev',
+	servername      => 'sandbox.dev',
 	port            => '80',
 	docroot         => '/var/www/sandbox',
 	redirect_status => 'permanent',
