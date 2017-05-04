@@ -41,7 +41,3 @@ Password: start100
 Username: root
 
 Password: start100
-
-## TODO
-
-Some more configuration to get more project with one box in touch.
