@@ -26,6 +26,8 @@ OS: Ubuntu/Xenial 64
 
 Apache ServerName: sandbox.dev
 
+IP: 192.168.56.211
+
 PHP Version 7.1 (fpm)
 
 MailHog - current (http://sandbox.dev:8025)
