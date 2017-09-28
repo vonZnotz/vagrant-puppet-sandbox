@@ -1,5 +1,5 @@
-typo3base vagrant
-=================
+base vagrant box
+================
 
 ## Description
 
