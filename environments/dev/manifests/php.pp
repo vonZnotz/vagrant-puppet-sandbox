@@ -1,5 +1,5 @@
 class { '::php::globals':
-	php_version => '7.1',
+	php_version => '7.2',
 }->class { '::php':
 	settings => {
 		'mail function/sendmail_path' => '/usr/bin/mailhog sendmail',
