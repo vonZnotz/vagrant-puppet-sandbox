@@ -1,7 +1,7 @@
 
 Vagrant.configure("2") do |config|
 	config.vm.define "sandbox" do |nodeconfig|
-		nodeconfig.vm.box = "ubuntu/xenial64"
+		nodeconfig.vm.box = "ubuntu/focal64"
 		nodeconfig.vm.hostname = "sandbox.box"
 		nodeconfig.vm.network :private_network, ip: '192.168.56.211'
 
@@ -23,5 +23,7 @@ Vagrant.configure("2") do |config|
 			puppet.environment = "dev"
 			puppet.environment_path = "environments"
 		end
+
+        nodeconfig.vm.synced_folder "../sandbox-html", "/var/www/sandbox", type: "nfs"
 	end
 end
